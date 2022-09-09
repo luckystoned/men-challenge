@@ -23,6 +23,12 @@ const PostSchema = new Schema({
     required: true,
     maxlength: MAX_BODY_LENGTH,
   },
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment',
+    },
+  ],
   date: { type: Date, default: Date.now },
 });
 

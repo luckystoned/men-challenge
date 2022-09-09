@@ -18,6 +18,7 @@ const errorCodes = {
   BODY_INVALID_LENGTH: 'Body length must be greater than',
   KEYWORDS_NOT_EXISTS: 'You must specify the keywords query string',
   KEYWORDS_IS_EMPTY: 'keywords query string is empty',
+  MAX_LENGTH: 'The comment cannot have more than',
 };
 
 export default errorCodes;

@@ -6,10 +6,11 @@ const create = (post) => Post.create(post);
 
 const findAll = () => Post.find({});
 
-const findById = (id) => Post.findById(id);
+const findById = (id) => Post.findById(id).populate('comments');
 
 const findByAuthor = (author) => Post.find({ author });
 
+// eslint-disable-next-line prettier/prettier
 const findByKeywords = (keywords) => Post.find({ $text: { $search: keywords } });
 
 const postService = {
