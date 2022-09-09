@@ -168,7 +168,6 @@ describe('Post Controller', () => {
     it('Should return bad request as author does not exist', async () => {
       try {
         const post = generatePostData({ author: mongoose.Types.ObjectId() });
-
         await instance.post(
           POSTS,
           post,
