@@ -8,6 +8,13 @@ const findAll = () => Post.find({});
 
 const findById = (id) => Post.findById(id);
 
-const postService = { create, findAll, findById };
+const findByAuthor = (author) => Post.find({ author });
+
+const postService = {
+  create,
+  findAll,
+  findById,
+  findByAuthor,
+};
 
 export default postService;

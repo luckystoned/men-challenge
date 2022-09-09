@@ -1,3 +1,4 @@
 import validateBody from './validateBody';
+import validateParamId from './validateParamId';
 
-export default { validateBody };
+export default { validateBody, validateParamId };
