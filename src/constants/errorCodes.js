@@ -10,7 +10,9 @@ const errorCodes = {
   POST_TITLE_INVALID_LENGTH: 'POST_TITLE_INVALID_LENGTH',
   POST_BODY_INVALID: 'POST_BODY_INVALID',
   POST_BODY_INVALID_LENGTH: 'POST_BODY_INVALID_LENGTH',
-  POST_NOT_EXISTS: 'POST_NOT_EXISTS',
+  POST_NOT_EXISTS: 'Post does not exist',
+  INVALID_USER:
+    'The user that are attempting to create the post is not the logged user',
   ID_INVALID: 'ID_INVALID',
   LANGUAGE_NOT_VALID: 'LANGUAGE_NOT_VALID',
 };

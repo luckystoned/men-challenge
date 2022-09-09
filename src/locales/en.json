@@ -11,6 +11,7 @@
   "POST_BODY_INVALID": "Post body is invalid",
   "POST_BODY_INVALID_LENGTH": "Post body length must be greater",
   "POST_NOT_EXISTS": "Post does not exist",
+  "INVALID_USER": "The user that are attempting to create the post is not the logged user",
   "ID_INVALID": "ID is invalid",
   "LANGUAGE_NOT_VALID": "Lang is invalid"
 }
