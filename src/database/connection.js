@@ -5,13 +5,7 @@ import ENVIRONMENTS from '../constants/environments';
 
 const connectToDatabase = async () => {
   try {
-    const {
-      MONGO_USERNAME,
-      MONGO_PASSWORD,
-      MONGO_HOST,
-      MONGO_PORT,
-      MONGO_DATABASE,
-    } = process.env;
+    const { MONGO_USERNAME, MONGO_PASSWORD, MONGO_CLUSTER } = process.env;
 
     const mongoOptions = {
       useCreateIndex: true,
@@ -28,7 +22,7 @@ const connectToDatabase = async () => {
     };
 
     await mongoose.connect(
-      `mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE}`,
+      `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_CLUSTER}/?retryWrites=true&w=majority`,
       { ...mongoCredentials, ...mongoOptions },
     );
 
