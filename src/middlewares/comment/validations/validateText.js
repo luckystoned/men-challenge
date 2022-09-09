@@ -7,6 +7,7 @@ const { MAX_LENGTH } = errorCodes;
 const validateText = check('comment.text')
   .exists()
   .isLength({ max: MAX_TEXT_LENGTH })
+  .withMessage(`${MAX_LENGTH} ${MAX_TEXT_LENGTH}`)
   .withMessage(`${MAX_LENGTH} ${MAX_TEXT_LENGTH} characters`);
 
 export default validateText;

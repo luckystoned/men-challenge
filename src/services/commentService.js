@@ -6,7 +6,8 @@ const add = async (data) => {
   const comment = await Comment.create(data.comment);
   const post = await Post.findById(data.postId);
   post.comments.push(comment._id);
-  return post.save();
+  post.save();
+  return comment;
 };
 
 const commentService = { add };
