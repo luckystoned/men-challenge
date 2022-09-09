@@ -31,4 +31,6 @@ PostSchema.methods.toJSON = function () {
   return user;
 };
 
+PostSchema.index({ title: 'text', body: 'text' });
+
 export default mongoose.model('Post', PostSchema);

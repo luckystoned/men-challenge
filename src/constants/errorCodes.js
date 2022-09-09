@@ -13,8 +13,11 @@ const errorCodes = {
   POST_NOT_EXISTS: 'Post does not exist',
   INVALID_USER:
     'The user that are attempting to create the post is not the logged user',
-  ID_INVALID: 'ID_INVALID',
+  INVALID_ID: 'INVALID_ID',
   LANGUAGE_NOT_VALID: 'LANGUAGE_NOT_VALID',
+  BODY_INVALID_LENGTH: 'Body length must be greater than',
+  KEYWORDS_NOT_EXISTS: 'You must specify the keywords query string',
+  KEYWORDS_IS_EMPTY: 'keywords query string is empty',
 };
 
 export default errorCodes;

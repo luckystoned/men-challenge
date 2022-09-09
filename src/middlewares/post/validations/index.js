@@ -3,6 +3,7 @@ import validateBody from './validateBody';
 import validateAuthorExists from './validateAuthorExists';
 import validateId from './validateId';
 import validateAuthorIsLoggedUser from './validateAuthorIsLoggedUser';
+import validateQueryKeywords from './validateQueryKeywords';
 
 export default {
   validateTitle,
@@ -10,4 +11,5 @@ export default {
   validateAuthorExists,
   validateId,
   validateAuthorIsLoggedUser,
+  validateQueryKeywords,
 };

@@ -9,6 +9,7 @@ const {
   validateBody: validatePostBody,
   validateAuthorExists,
   validateAuthorIsLoggedUser,
+  validateQueryKeywords,
 } = postValidations;
 
 const { validateBody, validateParamId } = commonValidations;
@@ -17,6 +18,7 @@ const {
   findAllPosts,
   findPostById,
   findPostsByAuthor,
+  findPostsByKeywords,
 } = postMiddlewares;
 
 const postRouter = express.Router();
@@ -28,11 +30,19 @@ const createPostValidations = [
   validateAuthorIsLoggedUser,
 ];
 
+const paramQueryKeywordsMiddleware = validateBody(validateQueryKeywords);
 const paramIdMiddleware = validateBody(validateParamId('id'));
 const createPostMiddleware = validateBody(createPostValidations);
 postRouter.post('/', isAuthorized, createPostMiddleware, createPost);
 
 postRouter.get('/', isAuthorized, findAllPosts);
+
+postRouter.get(
+  '/search',
+  isAuthorized,
+  paramQueryKeywordsMiddleware,
+  findPostsByKeywords,
+);
 
 postRouter.get('/:id', isAuthorized, paramIdMiddleware, findPostById);
 
